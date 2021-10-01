@@ -902,21 +902,21 @@
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "Generics/1.0.0": {
+      "Base_Generics/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/Generics.dll": {}
+          "bin/placeholder/Base_Generics.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Generics.dll": {}
+          "bin/placeholder/Base_Generics.dll": {}
         }
       },
       "LeetCode/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "Generics": "1.0.0"
+          "Base_Generics": "1.0.0"
         },
         "compile": {
           "bin/placeholder/LeetCode.dll": {}
@@ -3484,10 +3484,10 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "Generics/1.0.0": {
+    "Base_Generics/1.0.0": {
       "type": "project",
-      "path": "../Generics/Generics.csproj",
-      "msbuildProject": "../Generics/Generics.csproj"
+      "path": "../Base_Generics/Base_Generics.csproj",
+      "msbuildProject": "../Base_Generics/Base_Generics.csproj"
     },
     "LeetCode/1.0.0": {
       "type": "project",
@@ -3497,7 +3497,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Generics >= 1.0.0",
+      "Base_Generics >= 1.0.0",
       "LeetCode >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "coverlet.collector >= 1.2.0",
@@ -3512,11 +3512,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JackMurphy\\source\\repos\\Test\\LeetCode_Tests\\LeetCode_Tests.csproj",
+      "projectUniqueName": "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\LeetCode_Tests\\LeetCode_Tests.csproj",
       "projectName": "LeetCode_Tests",
-      "projectPath": "C:\\Users\\JackMurphy\\source\\repos\\Test\\LeetCode_Tests\\LeetCode_Tests.csproj",
+      "projectPath": "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\LeetCode_Tests\\LeetCode_Tests.csproj",
       "packagesPath": "C:\\Users\\JackMurphy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JackMurphy\\source\\repos\\Test\\LeetCode_Tests\\obj\\",
+      "outputPath": "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\LeetCode_Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3535,11 +3535,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\JackMurphy\\source\\repos\\Test\\Generics\\Generics.csproj": {
-              "projectPath": "C:\\Users\\JackMurphy\\source\\repos\\Test\\Generics\\Generics.csproj"
+            "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\Base_Generics\\Base_Generics.csproj": {
+              "projectPath": "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\Base_Generics\\Base_Generics.csproj"
             },
-            "C:\\Users\\JackMurphy\\source\\repos\\Test\\LeetCode\\LeetCode.csproj": {
-              "projectPath": "C:\\Users\\JackMurphy\\source\\repos\\Test\\LeetCode\\LeetCode.csproj"
+            "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\LeetCode\\LeetCode.csproj": {
+              "projectPath": "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\LeetCode\\LeetCode.csproj"
             }
           }
         }

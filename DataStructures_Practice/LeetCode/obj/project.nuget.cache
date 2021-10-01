@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CJIe6qauJ245d7WXgUSqxu8sYP9HK72JdvWT9UbBBDH14WLnDEH+DpqBfJlIKe4sjyhAkbsLQ015YnOG7Swo1w==",
+  "dgSpecHash": "Pct1E8k3nDhTVtu+XZq+0dOgVAJe6NFPKVv+7B0z2Vr5QVO5YI6jSASZ69Ect0sEjeMbNe0gaxqlEfbjxGs93A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\JackMurphy\\source\\repos\\Test\\LeetCode\\LeetCode.csproj",
+  "projectFilePath": "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\LeetCode\\LeetCode.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Generics\Generics.csproj" />
+    <ProjectReference Include="..\Base_Generics\Base_Generics.csproj" />
     <ProjectReference Include="..\LeetCode\LeetCode.csproj" />
   </ItemGroup>
 

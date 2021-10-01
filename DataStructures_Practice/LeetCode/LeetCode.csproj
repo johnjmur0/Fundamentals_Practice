@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Generics\Generics.csproj" />
+    <ProjectReference Include="..\Base_Generics\Base_Generics.csproj" />
   </ItemGroup>
 
 </Project>

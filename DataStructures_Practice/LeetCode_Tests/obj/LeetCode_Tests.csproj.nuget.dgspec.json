@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JackMurphy\\source\\repos\\Test\\LeetCode_Tests\\LeetCode_Tests.csproj": {}
+    "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\LeetCode_Tests\\LeetCode_Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JackMurphy\\source\\repos\\Test\\Generics\\Generics.csproj": {
+    "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\Base_Generics\\Base_Generics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JackMurphy\\source\\repos\\Test\\Generics\\Generics.csproj",
-        "projectName": "Generics",
-        "projectPath": "C:\\Users\\JackMurphy\\source\\repos\\Test\\Generics\\Generics.csproj",
+        "projectUniqueName": "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\Base_Generics\\Base_Generics.csproj",
+        "projectName": "Base_Generics",
+        "projectPath": "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\Base_Generics\\Base_Generics.csproj",
         "packagesPath": "C:\\Users\\JackMurphy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JackMurphy\\source\\repos\\Test\\Generics\\obj\\",
+        "outputPath": "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\Base_Generics\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -62,14 +62,14 @@
         }
       }
     },
-    "C:\\Users\\JackMurphy\\source\\repos\\Test\\LeetCode\\LeetCode.csproj": {
+    "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\LeetCode\\LeetCode.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JackMurphy\\source\\repos\\Test\\LeetCode\\LeetCode.csproj",
+        "projectUniqueName": "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\LeetCode\\LeetCode.csproj",
         "projectName": "LeetCode",
-        "projectPath": "C:\\Users\\JackMurphy\\source\\repos\\Test\\LeetCode\\LeetCode.csproj",
+        "projectPath": "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\LeetCode\\LeetCode.csproj",
         "packagesPath": "C:\\Users\\JackMurphy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JackMurphy\\source\\repos\\Test\\LeetCode\\obj\\",
+        "outputPath": "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\LeetCode\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -88,8 +88,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\JackMurphy\\source\\repos\\Test\\Generics\\Generics.csproj": {
-                "projectPath": "C:\\Users\\JackMurphy\\source\\repos\\Test\\Generics\\Generics.csproj"
+              "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\Base_Generics\\Base_Generics.csproj": {
+                "projectPath": "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\Base_Generics\\Base_Generics.csproj"
               }
             }
           }
@@ -121,14 +121,14 @@
         }
       }
     },
-    "C:\\Users\\JackMurphy\\source\\repos\\Test\\LeetCode_Tests\\LeetCode_Tests.csproj": {
+    "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\LeetCode_Tests\\LeetCode_Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JackMurphy\\source\\repos\\Test\\LeetCode_Tests\\LeetCode_Tests.csproj",
+        "projectUniqueName": "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\LeetCode_Tests\\LeetCode_Tests.csproj",
         "projectName": "LeetCode_Tests",
-        "projectPath": "C:\\Users\\JackMurphy\\source\\repos\\Test\\LeetCode_Tests\\LeetCode_Tests.csproj",
+        "projectPath": "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\LeetCode_Tests\\LeetCode_Tests.csproj",
         "packagesPath": "C:\\Users\\JackMurphy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JackMurphy\\source\\repos\\Test\\LeetCode_Tests\\obj\\",
+        "outputPath": "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\LeetCode_Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -147,11 +147,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\JackMurphy\\source\\repos\\Test\\Generics\\Generics.csproj": {
-                "projectPath": "C:\\Users\\JackMurphy\\source\\repos\\Test\\Generics\\Generics.csproj"
+              "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\Base_Generics\\Base_Generics.csproj": {
+                "projectPath": "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\Base_Generics\\Base_Generics.csproj"
               },
-              "C:\\Users\\JackMurphy\\source\\repos\\Test\\LeetCode\\LeetCode.csproj": {
-                "projectPath": "C:\\Users\\JackMurphy\\source\\repos\\Test\\LeetCode\\LeetCode.csproj"
+              "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\LeetCode\\LeetCode.csproj": {
+                "projectPath": "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\LeetCode\\LeetCode.csproj"
               }
             }
           }

@@ -1,0 +1,8 @@
+C:\source\Fundamentals_Practice\DataStructures_Practice\Base_Generics\bin\Debug\netstandard2.0\Base_Generics.deps.json
+C:\source\Fundamentals_Practice\DataStructures_Practice\Base_Generics\bin\Debug\netstandard2.0\Base_Generics.dll
+C:\source\Fundamentals_Practice\DataStructures_Practice\Base_Generics\bin\Debug\netstandard2.0\Base_Generics.pdb
+C:\source\Fundamentals_Practice\DataStructures_Practice\Base_Generics\obj\Debug\netstandard2.0\Base_Generics.AssemblyInfoInputs.cache
+C:\source\Fundamentals_Practice\DataStructures_Practice\Base_Generics\obj\Debug\netstandard2.0\Base_Generics.AssemblyInfo.cs
+C:\source\Fundamentals_Practice\DataStructures_Practice\Base_Generics\obj\Debug\netstandard2.0\Base_Generics.csproj.CoreCompileInputs.cache
+C:\source\Fundamentals_Practice\DataStructures_Practice\Base_Generics\obj\Debug\netstandard2.0\Base_Generics.dll
+C:\source\Fundamentals_Practice\DataStructures_Practice\Base_Generics\obj\Debug\netstandard2.0\Base_Generics.pdb
