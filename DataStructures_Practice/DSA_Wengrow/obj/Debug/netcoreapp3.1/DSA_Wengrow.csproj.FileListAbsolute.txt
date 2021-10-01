@@ -10,3 +10,4 @@ C:\source\Fundamentals_Practice\DataStructures_Practice\DSA_Wengrow\obj\Debug\ne
 C:\source\Fundamentals_Practice\DataStructures_Practice\DSA_Wengrow\obj\Debug\netcoreapp3.1\DSA_Wengrow.dll
 C:\source\Fundamentals_Practice\DataStructures_Practice\DSA_Wengrow\obj\Debug\netcoreapp3.1\DSA_Wengrow.pdb
 C:\source\Fundamentals_Practice\DataStructures_Practice\DSA_Wengrow\obj\Debug\netcoreapp3.1\DSA_Wengrow.genruntimeconfig.cache
+C:\source\Fundamentals_Practice\DataStructures_Practice\DSA_Wengrow\obj\Debug\netcoreapp3.1\DSA_Wengrow.csprojAssemblyReference.cache

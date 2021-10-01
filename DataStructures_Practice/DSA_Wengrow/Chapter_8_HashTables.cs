@@ -4,8 +4,9 @@ using System.Linq;
 
 namespace DSA_Wengrow
 {   
-    public static class DSAPractice
+    public static class Chapter_8_HashTables
     {
+        //ch 8 1/4
         public static int[] ArrayIntersection(int[] arr1, int[] arr2)
         {
             //create hash of larger arr
@@ -33,11 +34,12 @@ namespace DSA_Wengrow
             return retVal.ToArray();
         }
 
+        //ch 8 2/4
         public static string FirstDuplicate(string[] arr)
         {
             var charDict = new Dictionary<string, bool>();
 
-            foreach (var val in arr)
+            foreach (var val in arr)    
             {
                 var addSuccess = charDict.TryAdd(val, true);
 
@@ -49,6 +51,7 @@ namespace DSA_Wengrow
             return null;
         }
 
+        //ch 8 3/4
         public static string FindMissingLetter(string val)
         {
             char[] alphabet = Enumerable.Range('a', 26).Select(x => (char)x).ToArray();
@@ -80,6 +83,7 @@ namespace DSA_Wengrow
             return null;
         }
 
+        //ch 8 4/4
         public static char FirstNonDupe(string s)
         {
             var charDict = new Dictionary<char, bool>();
@@ -102,98 +106,6 @@ namespace DSA_Wengrow
 
             var retVal = nonDupe.OrderBy(x => x.Value).First().Key;
             return retVal;
-        }
-
-        public static bool SameCharacters(List<string> entries)
-        {
-            var uniqueChars = true;
-
-            var charDict = new Dictionary<char, bool>();
-
-            foreach (var entry in entries)
-            {
-                var charArray = entry.ToCharArray();
-
-                foreach (var charVal in charArray)
-                {
-                    var addAttempt = charDict.TryAdd(charVal, true);
-
-                    if (!addAttempt)
-                    {
-                        return false;
-                    }
-                }
-            }
-
-            return uniqueChars;
-        }
-
-        public static string TwoStrings(string s1, string s2)
-        {
-            var longerString = (s1.Count() > s2.Count()) ? s1 : s2;
-            var shorterString = (s1.Count() > s2.Count()) ? s2 : s1;
-
-            var charDict = new Dictionary<char, bool>();
-
-            foreach (var char1 in longerString.ToCharArray())
-            {
-                charDict.TryAdd(char1, true);
-            }
-
-            foreach (var char2 in shorterString.ToCharArray())
-            {
-                var getResult = charDict.TryGetValue(char2, out bool exists);
-
-                if (getResult)
-                {
-                    return ("YES");
-                }
-            }
-
-            return ("NO");
-        }
-
-        public static int MakeAnagram(string a, string b)
-        {
-            var charDict = new Dictionary<char, int>();
-
-            foreach (var charVal in a.ToCharArray())
-            {
-                var exists = charDict.TryGetValue(charVal, out int count);
-
-                if (exists)
-                {
-                    count++;
-                    charDict[charVal] = count;
-                }
-                else
-                {
-                    charDict.Add(charVal, 1);
-                }
-            }
-
-            var deletions = 0;
-
-            foreach (var char2 in b.ToCharArray())
-            {
-                var matching = charDict.TryGetValue(char2, out int count);
-
-                if (matching & count > 0)
-                {
-                    count--;
-                    charDict[char2] = count;
-                }
-                else
-                {
-                    deletions++;
-                }
-            }
-
-            var extraChars = charDict.Where(x => x.Value > 0).Select(y => y.Value).Sum();
-
-            deletions += extraChars;
-
-            return deletions;
         }
     }
 }
