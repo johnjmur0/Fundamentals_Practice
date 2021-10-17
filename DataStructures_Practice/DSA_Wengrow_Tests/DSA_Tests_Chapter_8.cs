@@ -2,7 +2,7 @@ using DSA_Wengrow;
 using Xunit;
 //I'll let LINQ fly for tests
 
-namespace UnitTests
+namespace DSA_Wengrow_Tests
 {
     public class DSA_Tests_Chapter_8
     {

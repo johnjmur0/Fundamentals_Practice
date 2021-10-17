@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Pct1E8k3nDhTVtu+XZq+0dOgVAJe6NFPKVv+7B0z2Vr5QVO5YI6jSASZ69Ect0sEjeMbNe0gaxqlEfbjxGs93A==",
+  "dgSpecHash": "7hLP8Y3MVBBpoW500maDpFUk8Bh2GIpcleQ8CqCD5rJDLflIF5KIcUZ/cVGTw1m4UMhG8sp8iGOk8l58TjZvdA==",
   "success": true,
   "projectFilePath": "C:\\source\\Fundamentals_Practice\\DataStructures_Practice\\LeetCode\\LeetCode.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
