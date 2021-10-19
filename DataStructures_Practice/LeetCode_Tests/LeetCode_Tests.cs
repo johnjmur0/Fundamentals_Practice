@@ -10,10 +10,14 @@ namespace UnitTests
         public void ReverseLinkedList()
         {
             var n5 = new ListNode(val: 5);
-            var n4 = new ListNode(val: 4, next: n5);
-            var n3 = new ListNode(val: 3, next: n4);
-            var n2 = new ListNode(val: 2, next: n3);
-            var n1 = new ListNode(val: 1, next: n2);
+            var n4 = new ListNode(val: 4);
+            n4.next = n5;
+            var n3 = new ListNode(val: 3);
+            n3.next = n4;
+            var n2 = new ListNode(val: 2);
+            n2.next = n3;
+            var n1 = new ListNode(val: 1);
+            n1.next = n2;
 
             var revListHead = LeetCodePractice.ReverseList(n1);
 

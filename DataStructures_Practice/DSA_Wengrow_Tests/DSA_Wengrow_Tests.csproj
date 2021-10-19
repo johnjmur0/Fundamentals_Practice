@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Base_Generics\Base_Generics.csproj" />
     <ProjectReference Include="..\DSA_Wengrow\DSA_Wengrow.csproj" />
   </ItemGroup>
 
