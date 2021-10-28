@@ -10,18 +10,6 @@ namespace DSA_Wengrow_Tests
 {
     public class DSA_Tests_Chapter_15
     {
-        private TreeNode Create(int[] arr)
-        {
-            TreeNode root = new TreeNode(arr[0]);
-
-            for (int i = 1; i < arr.Length; i++)
-            {
-                root.Insert(arr[i]);
-            }
-
-            return root;
-        }
-
         /*      1
          *        5           
          *    2      9
@@ -31,8 +19,9 @@ namespace DSA_Wengrow_Tests
         [Fact]
         public void Test_Insert()
         {
-            int[] input = new int[] { 1, 5, 9, 2, 4, 10, 6, 3, 8};
-            TreeNode testRoot = this.Create(input);
+            int[] input = new int[] { 5, 9, 2, 4, 10, 6, 3, 8};
+            TreeNode<int> testRoot = new TreeNode<int>(1);
+            testRoot.Populate(input);
 
             Assert.Null(testRoot.leftChild);
             Assert.Equal(10, testRoot.rightChild.rightChild.rightChild.val);
@@ -49,7 +38,7 @@ namespace DSA_Wengrow_Tests
         public void Test_Search_1000()
         {
             int[] input = Enumerable.Range(1, 1000).ToArray();
-            TreeNode balanced = Chapter_15_BST.ConstructBalancedTree(input, 1, 1000);
+            TreeNode<int> balanced = Chapter_15_BST.ConstructBalancedTree(input, 1, 1000);
 
             int levels = 1;
             var curr = balanced;
@@ -65,15 +54,16 @@ namespace DSA_Wengrow_Tests
         [Fact]
         public void Test_FindMax()
         {
-            int[] input = new int[] { 1, 5, 9, 2, 4, 10, 6, 3, 8 };
-            TreeNode testRoot = this.Create(input);
+            int[] input = new int[] { 5, 9, 2, 4, 10, 6, 3, 8 };
+            TreeNode<int> testRoot = new TreeNode<int>(1);
+            testRoot.Populate(input);
 
             var result = testRoot.FindGreatest();
             var expected = 10;
             Assert.Equal(expected, result);
 
             input = Enumerable.Range(1, 1000).ToArray();
-            TreeNode balanced = Chapter_15_BST.ConstructBalancedTree(input, 1, 1000);
+            TreeNode<int> balanced = Chapter_15_BST.ConstructBalancedTree(input, 1, 1000);
 
             result = balanced.FindGreatest();
             expected = 1000;
@@ -89,26 +79,28 @@ namespace DSA_Wengrow_Tests
         [Fact]
         public void Test_Traversals()
         {
-            int[] input = new int[] { 1, 5, 9, 2, 4, 10, 6, 3, 8 };
-            TreeNode testRoot = this.Create(input);
-            var binaryTree = new BinaryTree();
+            string[] input = new string[] { "B", "A", "D", "C", "E", "G", "I", "H"  };
+            TreeNode<string> testRoot = new TreeNode<string>("F");
+            testRoot.Populate(input);
 
-            List<int> valList = new List<int>();
+            var binaryTree = new BinaryTree<string>();
+
+            List<string> valList = new List<string>();
             binaryTree.PreOrder_Traverse(testRoot, valList);
             var result = String.Join("", valList);
-            string preOrder = "1524396810";
+            string preOrder = "FBADCEGIH";
             Assert.Equal(preOrder, result);
             valList.Clear();
 
             binaryTree.PostOrder_Traverse(testRoot, valList);
             result = String.Join("", valList);
-            string postOrder = "5243968101";
+            string postOrder = "ACEDBHIGF";
             Assert.Equal(postOrder, result);
             valList.Clear();
 
             binaryTree.InOrder_Traverse(testRoot, valList);
             result = String.Join("", valList);
-            string inOrder = "1524396810";
+            string inOrder = "ABCDEFGHI";
             Assert.Equal(inOrder, result);
         }
     }

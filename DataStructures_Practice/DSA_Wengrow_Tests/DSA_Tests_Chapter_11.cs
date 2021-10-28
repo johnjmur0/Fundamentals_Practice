@@ -3,7 +3,7 @@ using Xunit;
 using System.Linq;
 using DSA_Wengrow;
 
-namespace DSA_Wengrow
+namespace DSA_Wengrow_Tests
 {
     public class DSA_Tests_Chapter_11
     {

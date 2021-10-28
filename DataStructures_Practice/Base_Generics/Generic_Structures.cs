@@ -4,45 +4,37 @@ using System.Diagnostics;
 
 namespace Generics
 {
-    public class TreeNode
+    public class TreeNode<T> where T : IComparable
     {
-        public int val;
-        public string sVal;
-        public TreeNode leftChild;
-        public TreeNode rightChild;
-        public TreeNode(int val, TreeNode leftChild = null, TreeNode rightChild = null)
+        public T val;
+        public TreeNode<T> leftChild;
+        public TreeNode<T> rightChild;
+        public TreeNode(T val, TreeNode<T> leftChild = null, TreeNode<T> rightChild = null)
         {
             this.val = val;
             this.leftChild = leftChild;
             this.rightChild = rightChild;
         }
 
-        public TreeNode(string sVal, TreeNode leftChild = null, TreeNode rightChild = null)
-        {
-            this.sVal = sVal;
-            this.leftChild = leftChild;
-            this.rightChild = rightChild;
-        }
-
         //Should these be part of BinaryTree class?
-        public void Insert(int val)
+        public void Insert(T val)
         {
-            if (val < this.val)
+            if (val.CompareTo(this.val) < 0)
             {
                 if (this.leftChild == null)
                 {
-                    this.leftChild = new TreeNode(val);
+                    this.leftChild = new TreeNode<T>(val);
                 }
                 else
                 {
                     this.leftChild.Insert(val);
                 }
             }
-            else if (val > this.val)
+            else if (val.CompareTo(this.val) > 0)
             {
                 if (this.rightChild == null)
                 {
-                    this.rightChild = new TreeNode(val);
+                    this.rightChild = new TreeNode<T>(val);
                 }
                 else
                 {
@@ -50,10 +42,10 @@ namespace Generics
                 }
             }
         }
-        public int FindGreatest()
+        public T FindGreatest()
         {
-            int max = this.val;
-            TreeNode curr = this;
+            T max = this.val;
+            TreeNode<T> curr = this;
             while (curr.rightChild != null)
             {
                 curr = curr.rightChild;
@@ -61,12 +53,20 @@ namespace Generics
             }
             return max;
         }
+
+        public void Populate(T[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                this.Insert(arr[i]);
+            }
+        }
     }
-    public class BinaryTree
+    public class BinaryTree<T> where T: IComparable
     {
-        public TreeNode Root { get; set; }
+        public TreeNode<T> Root { get; set; }
 
-        public void PreOrder_Traverse(TreeNode node, List<int> valList)
+        public void PreOrder_Traverse(TreeNode<T> node, List<T> valList)
         {
             if (node != null)
             {
@@ -76,23 +76,23 @@ namespace Generics
             }
         }
 
-        public void PostOrder_Traverse(TreeNode node, List<int> valList)
+        public void PostOrder_Traverse(TreeNode<T> node, List<T> valList)
         {
             if (node != null)
             {
-                PreOrder_Traverse(node.leftChild, valList);
-                PreOrder_Traverse(node.rightChild, valList);
+                PostOrder_Traverse(node.leftChild, valList);
+                PostOrder_Traverse(node.rightChild, valList);
                 valList.Add(node.val);
             }
         }
 
-        public void InOrder_Traverse(TreeNode node, List<int> valList)
+        public void InOrder_Traverse(TreeNode<T> node, List<T> valList)
         {
             if (node != null)
             {
-                PreOrder_Traverse(node.leftChild, valList);
+                InOrder_Traverse(node.leftChild, valList);
                 valList.Add(node.val);
-                PreOrder_Traverse(node.rightChild, valList);
+                InOrder_Traverse(node.rightChild, valList);
             }
         }
     }

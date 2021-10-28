@@ -257,5 +257,97 @@ namespace LeetCode
             curr.next = head;
             return newHead;
         }
+
+        public static int RemoveDuplicates(int[] nums)
+        {
+            if (nums.Length == 0)
+            {
+                return 0;
+            }
+
+            var curr = 1;
+            var unique = 0;
+
+            while (curr <= nums.Length - 1)
+            {
+                while (nums[curr] == nums[unique])
+                {
+                    if (curr == nums.Length - 1)
+                    {
+                        return unique + 1;
+                    }
+                    curr++;
+                }
+                nums[unique + 1] = nums[curr];
+                unique++;
+            }
+
+            return unique + 1;
+        }
+
+        public static List<List<int>> BinaryTree_LevelTraversal(TreeNode<int> node)
+        {
+            var ret = new List<List<int>>();
+
+            var curr = node;
+            ret.Add(new List<int>() { node.val });
+            while (curr != null)
+            {
+
+            }
+            return ret;
+        }
+
+        public static List<int> BinaryTree_Travesal(TreeNode<int> node, string method)
+        {
+            List<string> available_methods = new List<string>() { "in order", "pre order", "post order" };
+
+            if (!available_methods.Contains(method.ToLower()))
+            {
+                throw new NotImplementedException($"Given {method} not available. List includes {String.Join(", ", available_methods)}");
+            }
+
+            var ret_list = new List<int>();
+            switch(method.ToLower())
+            {
+                case "in order":
+                    BinaryTree_InOrder(node, ret_list);
+                    break;
+                case "pre order":
+                    BinaryTree_PreOrder(node, ret_list);
+                    break;
+                case "post order":
+                    BinaryTree_PostOrder(node, ret_list);
+                    break;
+            }
+            return ret_list;
+        }
+
+        private static void BinaryTree_PreOrder(TreeNode<int> node, List<int> nodes)
+        {
+            if (node == null) { return; }
+
+            nodes.Add(node.val);
+            BinaryTree_PreOrder(node.leftChild, nodes);
+            BinaryTree_PreOrder(node.rightChild, nodes);
+        }
+
+        private static void BinaryTree_PostOrder(TreeNode<int> node, List<int> nodes)
+        {
+            if (node == null) { return; }
+
+            BinaryTree_PostOrder(node.leftChild, nodes);
+            BinaryTree_PostOrder(node.rightChild, nodes);
+            nodes.Add(node.val);
+        }
+
+        private static void BinaryTree_InOrder(TreeNode<int> node, List<int> nodes)
+        {
+            if (node == null) { return; }
+
+            BinaryTree_InOrder(node.leftChild, nodes);
+            nodes.Add(node.val);
+            BinaryTree_InOrder(node.rightChild, nodes);
+        }
     }
 }
