@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 using DSA_Wengrow;
-using System.Collections;
 using System.Linq;
 using System.Diagnostics;
 
 namespace DSA_Wengrow_Tests
 {
-    public class DSA_Tests_Chapter_13
+    public class DSA_Tests_Chapter_Recursion2
     {
         [Fact]
         public void Test_Largest_3_Product()

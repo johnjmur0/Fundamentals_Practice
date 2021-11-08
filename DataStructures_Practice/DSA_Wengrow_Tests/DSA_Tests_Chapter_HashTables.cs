@@ -4,7 +4,7 @@ using Xunit;
 
 namespace DSA_Wengrow_Tests
 {
-    public class DSA_Tests_Chapter_8
+    public class DSA_Tests_Chapter_HashTables
     {
         [Fact]
         public void ArrayIntersection_Test()

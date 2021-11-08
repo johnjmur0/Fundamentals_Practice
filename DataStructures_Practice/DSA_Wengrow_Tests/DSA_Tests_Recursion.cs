@@ -5,7 +5,7 @@ using DSA_Wengrow;
 
 namespace DSA_Wengrow_Tests
 {
-    public class DSA_Tests_Chapter_11
+    public class DSA_Tests_Recursion
     {
         [Fact]
         public void TotalCharCount_Test()

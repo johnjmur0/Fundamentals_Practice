@@ -7,7 +7,7 @@ using System;
 
 namespace DSA_Wengrow_Tests
 {
-    public class DSA_Tests_Chapter_12
+    public class DSA_Tests_Chapter_DynamicProgramming
     {
         [Fact]
         public void Test_Extra_Call_Length()

@@ -8,7 +8,7 @@ using DSA_Wengrow;
 
 namespace DSA_Wengrow_Tests
 {
-    public class DSA_Tests_Chapter_15
+    public class DSA_Tests_Chapter_Trees
     {
         /*      1
          *        5           

@@ -6,7 +6,7 @@ using Generics;
 
 namespace DSA_Wengrow_Tests
 {
-    public class DSA_Tests_Chapter_14
+    public class DSA_Tests_Chapter_LinkedList
     {
         private LinkedList Get_LinkedList(int length)
         {
