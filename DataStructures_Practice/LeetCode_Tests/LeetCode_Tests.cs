@@ -151,6 +151,7 @@ namespace UnitTests
         [Fact]
         public void Test_BinaryTree_Symmetrical_Bad_2()
         {
+            //TODO would love way to make binary tree based on leet code array, but not super easy
             TreeNode<int> nine_1 = new TreeNode<int>(9);
             TreeNode<int> nine_2 = new TreeNode<int>(9);
             TreeNode<int> eight_1 = new TreeNode<int>(8);
@@ -170,6 +171,23 @@ namespace UnitTests
 
             bool result = LeetCodePractice.BinaryTree_IsSymmetric(two);
             Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void Test_BinaryTree_FromArray()
+        {
+            var tree_arr = new int?[] { 5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, null, null, 1 };
+
+            //mock out most of this tree
+            TreeNode<int> expected = new TreeNode<int>(val: 5);
+
+            TreeNode<int> result = LeetCodePractice.MakeTree_FromArray(tree_arr);
+        }
+
+        [Fact]
+        public void Test_BinaryTree_HasPathSum()
+        {
+            var tree_arr = new int?[] { 5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1 };
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace LeetCode
 {
+    //TODO break this up into classes by problem type
     public static class LeetCodePractice
     {
         public static bool CanMakeArithmeticProgression(int[] arr)
@@ -365,7 +366,7 @@ namespace LeetCode
 
         public static bool BinaryTree_IsSymmetric(TreeNode<int> root)
         {
-            if (root == null) { return true;  }
+            if (root == null) { return true; }
 
             var levelList = new List<List<int>>();
             levelList.Add(new List<int>() { root.val });
@@ -408,6 +409,47 @@ namespace LeetCode
 
             BinaryTree_IsSymmetric_Helper(node.leftChild, levelList, depth);
             BinaryTree_IsSymmetric_Helper(node.rightChild, levelList, depth);
+        }
+
+        public static bool HasPathSum(TreeNode<int> root, int target)
+        {
+            bool sum_exists = false;
+
+            int branchSum = 0;
+            HasPathSum_Helper(root, target, branchSum);
+
+            return sum_exists;
+        }
+
+        private static void HasPathSum_Helper(TreeNode<int> node, int target, int branchSum)
+        {
+            if (node == null) { return; }
+
+            branchSum += node.val;
+
+            if (branchSum == target) { return; }
+
+            HasPathSum_Helper(node.leftChild, target, branchSum);
+            HasPathSum_Helper(node.rightChild, target, branchSum);
+        }
+
+        public static TreeNode<int> MakeTree_FromArray(int?[] inputs)
+        {
+            if (inputs.Length == 0) {
+                throw new ArgumentOutOfRangeException("input arr is empty. What are you doing?");
+            }
+
+            return MakeTree_FromArray_Helper(inputs, 0);
+        }
+
+        private static TreeNode<int> MakeTree_FromArray_Helper(int?[] inputs, int pos)
+        {
+            if (pos >= inputs.Length || inputs[pos] == null) { return null; }
+                
+            return new TreeNode<int>(
+                val: (int)inputs[pos], 
+                leftChild: MakeTree_FromArray_Helper(inputs, pos * 2 + 1), 
+                rightChild: MakeTree_FromArray_Helper(inputs, pos * 2 + 2));
         }
     }
 }
