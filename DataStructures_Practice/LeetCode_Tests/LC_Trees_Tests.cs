@@ -1,60 +1,18 @@
-using Generics;
-using LeetCode;
+﻿using Generics;
+using System;
 using System.Collections.Generic;
+using LeetCode;
 using Xunit;
 
-namespace UnitTests
+namespace LeetCode_Tests
 {
-    public class LeetCode_Tests
+    public class LC_Trees_Tests
     {
-        [Fact]
-        public void ReverseLinkedList()
-        {
-            var n5 = new ListNode(val: 5);
-            var n4 = new ListNode(val: 4);
-            n4.next = n5;
-            var n3 = new ListNode(val: 3);
-            n3.next = n4;
-            var n2 = new ListNode(val: 2);
-            n2.next = n3;
-            var n1 = new ListNode(val: 1);
-            n1.next = n2;
-
-            var revListHead = LeetCodePractice.ReverseList(n1);
-
-            var curr = revListHead;
-            var expected = 5;
-            while (curr != null)
-            {
-                Assert.Equal(expected, curr.val);
-                curr = curr.next;
-                expected -= 1;
-            }
-        }
-
-        [Fact]
-        public void Test_RemoveDupes()
-        {
-            int[] input = new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
-            int expected = 5;
-            int[] expected_nums = new int[] { 0, 1, 2, 3, 4, 0, 0, 0, 0, 0 };
-
-            var result = LeetCodePractice.RemoveDuplicates(input);
-
-            Assert.Equal(expected, result);
-
-            input = new int[] { 1, 1, 2 };
-            result = LeetCodePractice.RemoveDuplicates(input);
-
-            input = new int[] { 1, 2 };
-            result = LeetCodePractice.RemoveDuplicates(input);
-        }
-
         private void Execute_traversal(TreeNode<int> root, List<int> inOrder_expected, List<int> preOrder_expected, List<int> postOrder_expected)
         {
-            var inOrder_result = LeetCodePractice.BinaryTree_Travesal(root, "in order");
-            var preOrder_result = LeetCodePractice.BinaryTree_Travesal(root, "pre order");
-            var postOrder_result = LeetCodePractice.BinaryTree_Travesal(root, "post order");
+            var inOrder_result = LC_Trees.BinaryTree_Travesal(root, "in order");
+            var preOrder_result = LC_Trees.BinaryTree_Travesal(root, "pre order");
+            var postOrder_result = LC_Trees.BinaryTree_Travesal(root, "post order");
 
             Assert.Equal(inOrder_expected, inOrder_result);
             Assert.Equal(preOrder_expected, preOrder_result);
@@ -91,7 +49,7 @@ namespace UnitTests
                 new List<int>() { 15, 7 },
             };
 
-            var result = LeetCodePractice.BinaryTree_LevelTraversal(root);
+            var result = LC_Trees.BinaryTree_LevelTraversal(root);
             Assert.Equal(expected, result);
 
             TreeNode<int> five = new TreeNode<int>(5);
@@ -107,7 +65,7 @@ namespace UnitTests
                 new List<int>() { 4, 5 },
             };
 
-            result = LeetCodePractice.BinaryTree_LevelTraversal(root);
+            result = LC_Trees.BinaryTree_LevelTraversal(root);
             Assert.Equal(expected, result);
         }
 
@@ -127,7 +85,7 @@ namespace UnitTests
 
             var expected = true;
 
-            var result = LeetCodePractice.BinaryTree_IsSymmetric(one);
+            var result = LC_Trees.BinaryTree_IsSymmetric(one);
             Assert.Equal(expected, result);
         }
 
@@ -144,7 +102,7 @@ namespace UnitTests
 
             bool expected = false;
 
-            bool result = LeetCodePractice.BinaryTree_IsSymmetric(one);
+            bool result = LC_Trees.BinaryTree_IsSymmetric(one);
             Assert.Equal(expected, result);
         }
 
@@ -169,25 +127,87 @@ namespace UnitTests
 
             bool expected = false;
 
-            bool result = LeetCodePractice.BinaryTree_IsSymmetric(two);
+            bool result = LC_Trees.BinaryTree_IsSymmetric(two);
             Assert.Equal(expected, result);
         }
 
         [Fact]
         public void Test_BinaryTree_FromArray()
         {
-            var tree_arr = new int?[] { 5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, null, null, 1 };
+            var test_arr = new int?[] { 5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, null, null, 1 };
 
             //mock out most of this tree
             TreeNode<int> expected = new TreeNode<int>(val: 5);
 
-            TreeNode<int> result = LeetCodePractice.MakeTree_FromArray(tree_arr);
+            TreeNode<int> result = LC_Trees.MakeTree_FromArray(test_arr);
+
+            result.val = expected.val;
+            result.leftChild.leftChild.leftChild.val = 7;
+            result.leftChild.rightChild = null;
+
+            result.rightChild.rightChild.rightChild.val = 1;
+            result.rightChild.leftChild.val = 13;
+            result.rightChild.leftChild.rightChild = null;
         }
 
         [Fact]
-        public void Test_BinaryTree_HasPathSum()
+        public void Test_BinaryTree_HasPathSum_True()
         {
-            var tree_arr = new int?[] { 5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1 };
+            var tree_arr = new int?[] { 5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, null, null, 1 };
+
+            TreeNode<int> test_root = LC_Trees.MakeTree_FromArray(tree_arr);
+
+            int test_target = 22;
+            bool expected = true;
+
+            bool result = LC_Trees.HasPathSum(test_root, test_target);
+
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void Test_BinaryTree_HasPathSum_Single()
+        {
+            var tree_arr = new int?[] { 1 };
+
+            TreeNode<int> test_root = LC_Trees.MakeTree_FromArray(tree_arr);
+
+            int test_target = 1;
+            bool expected = true;
+
+            bool result = LC_Trees.HasPathSum(test_root, test_target);
+
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void Test_BinaryTree_HasPathSum_False()
+        {
+            var tree_arr = new int?[] { 1, 2, 3 };
+
+            TreeNode<int> test_root = LC_Trees.MakeTree_FromArray(tree_arr);
+
+            int test_target = 5;
+            bool expected = false;
+
+            bool result = LC_Trees.HasPathSum(test_root, test_target);
+
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void Test_BinaryTree_HasPathSum_False_2()
+        {
+            var tree_arr = new int?[] { 1, 2 };
+
+            TreeNode<int> test_root = LC_Trees.MakeTree_FromArray(tree_arr);
+
+            int test_target = 0;
+            bool expected = false;
+
+            bool result = LC_Trees.HasPathSum(test_root, test_target);
+
+            Assert.Equal(expected, result);
         }
     }
 }
