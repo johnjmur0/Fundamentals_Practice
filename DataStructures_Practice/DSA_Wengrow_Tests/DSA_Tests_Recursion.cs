@@ -14,7 +14,7 @@ namespace DSA_Wengrow_Tests
 
             var expected = input.Select(x => x.Length).Sum();
 
-            var result = Chapter_11_Recursion.TotalCharCount(input);
+            var result = Ch_11_Recursion.TotalCharCount(input);
 
             Assert.Equal(expected, result);
         }
@@ -30,7 +30,7 @@ namespace DSA_Wengrow_Tests
             //var result = Chapter11_Recursion.ReturnEvens_InPlace(input);
 
             //But by putting into new int[]? and removing nulls, its way faster
-            var result = Chapter_11_Recursion.ReturnEven(input, new int?[input.Length]);
+            var result = Ch_11_Recursion.ReturnEven(input, new int?[input.Length]);
 
             var nonNullResult = result.Where(x => x != null).Select(x => (int)x).ToArray();
 
@@ -45,7 +45,7 @@ namespace DSA_Wengrow_Tests
 
             while (nth < 50)
             {
-                var result = Chapter_11_Recursion.TriangleNumber(nth);
+                var result = Ch_11_Recursion.TriangleNumber(nth);
 
                 Assert.Equal(expected, result);
 
@@ -60,15 +60,15 @@ namespace DSA_Wengrow_Tests
             var xString = "hex";
             var expectedIndex = 2;
 
-            var xIndex = Chapter_11_Recursion.FirstXIndex(xString);
+            var xIndex = Ch_11_Recursion.FirstXIndex(xString);
             Assert.Equal(expectedIndex, xIndex);
 
             var allX = "xxxxxxxxx";
-            xIndex = Chapter_11_Recursion.FirstXIndex(allX);
+            xIndex = Ch_11_Recursion.FirstXIndex(allX);
             Assert.Equal(0, xIndex);
 
             var noX = "abcdefg";
-            xIndex = Chapter_11_Recursion.FirstXIndex(noX);
+            xIndex = Ch_11_Recursion.FirstXIndex(noX);
             Assert.Null(xIndex);
         }
 
@@ -78,7 +78,7 @@ namespace DSA_Wengrow_Tests
             var rowCount = 3;
             var colCount = 4;
 
-            var shortestPathCount = Chapter_11_Recursion.UniquePaths(rowCount, colCount);
+            var shortestPathCount = Ch_11_Recursion.UniquePaths(rowCount, colCount);
             Assert.Equal(10, shortestPathCount);
         }
     }
