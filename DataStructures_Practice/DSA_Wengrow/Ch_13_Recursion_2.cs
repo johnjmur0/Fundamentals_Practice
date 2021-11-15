@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DSA_Wengrow
 {
-    public static class Chapter_13_Recursion2
+    public static class Ch_13_Recursion_2
     {
         //Do with sorting to avoid O(N^3) loop of 3
         public static long Largest_3_Product(int[] arr)

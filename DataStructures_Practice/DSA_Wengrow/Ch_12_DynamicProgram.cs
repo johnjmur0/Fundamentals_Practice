@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DSA_Wengrow
 {
-    public static class Chapter_12_DynamicProgramming
+    public static class Ch_12_DynamicProgram
     {
         public static int Add_Until_100_ExtraCall(int[] arr)
         {

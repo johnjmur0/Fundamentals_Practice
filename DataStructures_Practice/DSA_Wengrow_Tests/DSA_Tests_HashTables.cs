@@ -4,7 +4,7 @@ using Xunit;
 
 namespace DSA_Wengrow_Tests
 {
-    public class DSA_Tests_Chapter_HashTables
+    public class DSA_Tests_HashTables
     {
         [Fact]
         public void ArrayIntersection_Test()
@@ -14,7 +14,7 @@ namespace DSA_Wengrow_Tests
 
             var expected = new int[] { 2, 4 };
 
-            var result = Chapter_8_HashTables.ArrayIntersection(arr1, arr2);
+            var result = Ch_8_HashTables.ArrayIntersection(arr1, arr2);
 
             Assert.Equal(expected, result);
         }
@@ -24,7 +24,7 @@ namespace DSA_Wengrow_Tests
         {
             var input = new string[] { "a", "b", "c", "d", "c", "e", "f" };
             var expected = "c";
-            var result = Chapter_8_HashTables.FirstDuplicate(input);
+            var result = Ch_8_HashTables.FirstDuplicate(input);
 
             Assert.Equal(expected, result);
         }
@@ -34,7 +34,7 @@ namespace DSA_Wengrow_Tests
         {
             var input = "the quick brown box jumps over a lazy dog";
             var expected = "f";
-            var result = Chapter_8_HashTables.FindMissingLetter(input);
+            var result = Ch_8_HashTables.FindMissingLetter(input);
 
             Assert.Equal(expected, result);
         }
@@ -44,7 +44,7 @@ namespace DSA_Wengrow_Tests
         {
             var input = "minimum";
             var expected = 'n';
-            var result = Chapter_8_HashTables.FirstNonDupe(input);
+            var result = Ch_8_HashTables.FirstNonDupe(input);
 
             Assert.Equal(expected, result);
 

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace DSA_Wengrow
 {   
-    public static class Chapter_8_HashTables
+    public static class Ch_8_HashTables
     {
         //ch 8 1/4
         public static int[] ArrayIntersection(int[] arr1, int[] arr2)

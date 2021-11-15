@@ -7,7 +7,7 @@ using System;
 
 namespace DSA_Wengrow_Tests
 {
-    public class DSA_Tests_Chapter_DynamicProgramming
+    public class DSA_Tests_DynamicProgramming
     {
         [Fact]
         public void Test_Extra_Call_Length()
@@ -27,7 +27,7 @@ namespace DSA_Wengrow_Tests
 
             //But this is almost instant with just 1 call
             var sw = Stopwatch.StartNew();
-            var result = Chapter_12_DynamicProgramming.Add_Until_100(input);
+            var result = Ch_12_DynamicProgram.Add_Until_100(input);
             sw.Stop();
 
             Console.WriteLine($"No Extra Call={sw.Elapsed}");
@@ -40,7 +40,7 @@ namespace DSA_Wengrow_Tests
             var input = 64;
             var expected = 16;
             var sw = Stopwatch.StartNew();
-            var result = Chapter_12_DynamicProgramming.Golomb_Sequence(input);
+            var result = Ch_12_DynamicProgram.Golomb_Sequence(input);
             sw.Stop();
 
             var non_memoTime = sw.Elapsed;
@@ -48,7 +48,7 @@ namespace DSA_Wengrow_Tests
             Assert.Equal(expected, result);
 
             sw = Stopwatch.StartNew();
-            result = Chapter_12_DynamicProgramming.Golomb_Sequence_Memoize(input, new int[input + 1]);
+            result = Ch_12_DynamicProgram.Golomb_Sequence_Memoize(input, new int[input + 1]);
             sw.Stop();
 
             var memoTime = sw.Elapsed;
@@ -66,7 +66,7 @@ namespace DSA_Wengrow_Tests
             var columns = 17;
             var expected = 601080390;
             var sw = Stopwatch.StartNew();
-            var result = Chapter_12_DynamicProgramming.Unique_Paths(rows, columns);
+            var result = Ch_12_DynamicProgram.Unique_Paths(rows, columns);
             sw.Stop();
 
             var non_memoTime = sw.Elapsed;
@@ -74,7 +74,7 @@ namespace DSA_Wengrow_Tests
             Assert.Equal(expected, result);
 
             sw = Stopwatch.StartNew();
-            result = Chapter_12_DynamicProgramming.Unique_Paths_Memo(
+            result = Ch_12_DynamicProgram.Unique_Paths_Memo(
                 rows, 
                 columns, 
                 new int[rows + 1, columns + 1]);

@@ -8,7 +8,7 @@ using DSA_Wengrow;
 
 namespace DSA_Wengrow_Tests
 {
-    public class DSA_Tests_Chapter_Trees
+    public class DSA_Tests_Trees
     {
         /*      1
          *        5           
@@ -38,7 +38,7 @@ namespace DSA_Wengrow_Tests
         public void Test_Search_1000()
         {
             int[] input = Enumerable.Range(1, 1000).ToArray();
-            TreeNode<int> balanced = Chapter_15_BST.ConstructBalancedTree(input, 1, 1000);
+            TreeNode<int> balanced = Ch_15_BST.ConstructBalancedTree(input, 1, 1000);
 
             int levels = 1;
             var curr = balanced;
@@ -63,7 +63,7 @@ namespace DSA_Wengrow_Tests
             Assert.Equal(expected, result);
 
             input = Enumerable.Range(1, 1000).ToArray();
-            TreeNode<int> balanced = Chapter_15_BST.ConstructBalancedTree(input, 1, 1000);
+            TreeNode<int> balanced = Ch_15_BST.ConstructBalancedTree(input, 1, 1000);
 
             result = balanced.FindGreatest();
             expected = 1000;

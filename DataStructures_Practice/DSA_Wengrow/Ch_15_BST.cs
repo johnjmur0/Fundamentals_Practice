@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DSA_Wengrow
 {
-    public static class Chapter_15_BST
+    public static class Ch_15_BST
     {
         public static TreeNode<int> ConstructBalancedTree(int[] values, int min, int max)
         {

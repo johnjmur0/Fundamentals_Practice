@@ -1,6 +1,6 @@
 ﻿namespace DSA_Wengrow
 {
-    public static class Chapter_11_Recursion
+    public static class Ch_11_Recursion
     {
         public static int TotalCharCount(string[] s)
         {
