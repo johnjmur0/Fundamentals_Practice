@@ -65,27 +65,156 @@ namespace DSA_Wengrow
 
         public static int? Find_Missing_Int(int[] arr)
         {
-            return null;
+            int expected_sum = 0;
+            int actual_sum = 0;
+
+            for (int i = 1; i <= arr.Length; i++)
+            {
+                expected_sum += i;
+            }
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                actual_sum += arr[i];
+            }
+
+            return expected_sum - actual_sum;
         }
 
         public static int Find_Max_Sell(int[] arr)
         {
-            return 0;
+            var largest_profit = int.MinValue;
+
+            var min_buy = arr[0];
+
+            for (int i = 1; i < arr.Length; i++)
+            {
+                var day_profit = arr[i] - min_buy;
+
+                if (day_profit > largest_profit)
+                {
+                    largest_profit = day_profit;
+                }
+
+                if (arr[i] < min_buy)
+                {
+                    min_buy = arr[i];
+                }
+            }
+
+            return largest_profit;
         }
 
         public static int Get_Highest_Product(int[] arr)
         {
-            return 0;
+            var lowest = int.MaxValue;
+            var second_lowest = int.MaxValue;
+
+            var highest = int.MinValue;
+            var second_highest = int.MinValue;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+
+                if (arr[i] < lowest)
+                {
+                    lowest = arr[i];
+                }
+
+                else if (arr[i] > lowest & arr[i] < second_lowest)
+                {
+                    second_lowest = arr[i];
+                }
+
+                else if (arr[i] > highest)
+                {
+                    highest = arr[i];
+                }
+
+                else if (arr[i] < highest & arr[i] > second_highest)
+                {
+                    second_highest = arr[i];
+                }
+            }
+
+            var lowest_product = lowest * second_lowest;
+            var highest_product = highest * second_highest;
+
+            return Math.Max(lowest_product, highest_product);
         }
 
         public static double[] Sort_Temps(double[] arr)
         {
-            return arr;
+            var temp_dict = new Dictionary<double, int>();
+
+            foreach (var temp in arr)
+            {
+                if (temp_dict.TryGetValue(temp, out int count))
+                {
+                    temp_dict[temp] += 1;
+                }
+                else
+                {
+                    temp_dict[temp] = 1;
+                }
+            }
+
+            var temp_min = 97.0;
+            var temp_max = 99.0;
+
+            var sorted_temps = new List<double>();
+
+            while (temp_min <= temp_max)
+            {
+                if (temp_dict.TryGetValue(temp_min, out int count))
+                {
+                    for (int i = 0; i < count; i++)
+                    {
+                        sorted_temps.Add(temp_min);
+                    }
+                }
+                temp_min = Math.Round(temp_min += .1, 1);
+
+            }
+
+            return sorted_temps.ToArray();
         }
 
-        public static int[] Find_Longest_Sequence(int[] arr)
+        public static int Find_Longest_Sequence(int[] arr)
         {
-            return arr;
+            int max_seq_len = 0;
+            var arr_dict = new Dictionary<int, bool>();
+
+            foreach (int val in arr)
+            {
+                if (!arr_dict.TryGetValue(val, out bool exists))
+                {
+                    arr_dict[val] = true;
+                }
+            }
+
+            foreach (int val in arr)
+            {
+                if (!arr_dict.TryGetValue(val - 1, out bool exists_min))
+                {
+                    var curr_seq_len = 1;
+
+                    var curr_num = val;
+
+                    while (arr_dict.TryGetValue(curr_num + 1, out bool exists_next))
+                    {
+                        curr_seq_len += 1;
+                        curr_num += 1;
+
+                        if (curr_seq_len > max_seq_len)
+                        {
+                            max_seq_len = curr_seq_len;
+                        }
+                    }
+                }
+            }
+
+            return max_seq_len;
         }
     }
 }

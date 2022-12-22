@@ -144,7 +144,7 @@ namespace DSA_Wengrow_Tests
         {
             var input = new int[] { 10, 5, 12, 3, 55, 30, 4, 11, 2 };
 
-            var expected = new int[] { 2, 3, 4, 5 };
+            var expected = 4;
 
             var result = Ch_20_Time_Opt.Find_Longest_Sequence(input);
 
@@ -156,7 +156,7 @@ namespace DSA_Wengrow_Tests
         {
             var input = new int[] { 19, 13, 15, 12, 18, 14, 17, 11 };
 
-            var expected = new int[] { 11, 12, 13, 14, 15 };
+            var expected = 5;
 
             var result = Ch_20_Time_Opt.Find_Longest_Sequence(input);
 
